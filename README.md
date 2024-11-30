@@ -1,4 +1,4 @@
-# Animal Classification API with YOLO
+# Animal Detection API with YOLO
 
 This is a Django-based API that uses the YOLO (You Only Look Once) model to classify images of animals into categories like CAT, DOG, or COW. The project also accepts location data and stores animal information in a database.
 
@@ -15,7 +15,7 @@ It's recommended to use a virtual environment to manage dependencies.
 #### On macOS/Linux:
 ```bash
 # Navigate to the project directory
-cd path/to/animal-classification-api
+cd path/to/animal_detection_api
 
 # Create a virtual environment
 python3 -m venv venv
@@ -26,7 +26,7 @@ source venv/bin/activate
 #### On Windows:
 ```
 # Navigate to the project directory
-cd path\to\animal-classification-api
+cd path\to\animal_detection_api
 
 # Create a virtual environment
 python -m venv venv
