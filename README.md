@@ -1,6 +1,6 @@
 # Animal Detection API with YOLO
 
-This is a Django-based API that uses the YOLO (You Only Look Once) model to classify images of animals into categories like CAT, DOG, or COW. The project also accepts location data and stores animal information in a database.
+This is a Django-based API that uses our fine-tuned YOLO (You Only Look Once) model to classify images of animals into categories like CAT, DOG, or COW. The project also accepts location data and stores animal information in a database.
 
 ## Project Setup
 
