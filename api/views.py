@@ -9,7 +9,7 @@ from ultralytics import YOLO
 from .models import Animal
 
 # Load the YOLO model (you can customize the path or model type)
-model = YOLO('yolov8n.pt')
+model = YOLO('best.pt')
 
 def decode_base64_to_image(base64_string):
     """
@@ -102,13 +102,18 @@ def submit(request):
 
             # Classify the resized image
             classification = classify_image_with_yolo(resized_image)
+            actual_classification=classification
 
             if classification.lower() == "none detected":
                 return JsonResponse({"error": "No valid animal detected"}, status=400)
+            if classification.lower() == "cat":
+                actual_classification='dog'
+            elif classification.lower() == 'dog':
+                actual_classification='cat'
 
             # Create and save the Animal object
             animal = Animal.objects.create(
-                name=classification.upper(),
+                name=actual_classification.upper(),
                 latitude=latitude,
                 longitude=longitude
             )
