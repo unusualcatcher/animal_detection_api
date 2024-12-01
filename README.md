@@ -64,4 +64,7 @@ This endpoint returns all the animals' locations stored in the database.
 
 Method: GET
 
+### Custom CNN Model
+The custom CNN model was trained using a kaggle notebook which is available at: https://www.kaggle.com/code/unusualcatcher/notebooka4be39a321
+
 
