@@ -74,7 +74,6 @@ def classify_image_with_yolo(image):
     
     return detected_labels[0]  
 
-
 @csrf_exempt
 def submit(request):
     if request.method == "POST":
@@ -124,7 +123,6 @@ def submit(request):
 
         except (ValueError, KeyError) as e:
             return JsonResponse({"error": f"Invalid request data: {str(e)}"}, status=400)
-
 
 
 def locations(request):
